@@ -2,7 +2,7 @@
 
 Small Python project for [TypeSafe AI](https://docs.typesafe.ai/). It asks typed questions about a piece of text, then uses the returned probabilities to decide what to do next.
 
-`test_jev.py` classifies a support ticket. `claim_triage.py` reads a first notice of loss, adjuster notes, and supporting documents, then routes the claim. `test_typesafe_ai.py` checks typed agent behavior locally and does not call TypeSafe.
+`test_jev.py` classifies a support ticket. `claim_triage.py` reads a first notice of loss, adjuster notes, and supporting documents, then routes the claim.
 
 ## Setup
 
@@ -20,14 +20,11 @@ Create a `.env` file in the project root. The client reads `TYPESAFE_API_KEY`:
 TYPESAFE_API_KEY=your_key_here
 ```
 
-`.env` and `.venv` are listed in `.gitignore`.
-
 ## Run
 
 ```powershell
 python test_jev.py
 python claim_triage.py
-python test_typesafe_ai.py
 ```
 
 `requests.https` is a REST Client file. Each block is one HTTP call, and the comment under the title is the same call as `curl`.
@@ -66,9 +63,3 @@ Safe to commit: the Python files, `requirements.txt`, `requests.https`, `.gitign
 
 Leave `.env` and `.venv/` on your machine. After you create the GitHub repo:
 
-```powershell
-git add .gitignore README.md claim_triage.py requests.https requirements.txt test_jev.py test_typesafe_ai.py screenshots
-git commit -m "Add TypeSafe examples and claim triage."
-git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
-git push -u origin main
-```
