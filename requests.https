@@ -1,0 +1,39 @@
+# REST Client requests. Each block is one call.
+# The comment under each title is the same request as curl.
+
+### GET with a query string
+# curl "https://httpbin.org/get?name=jev&feature=typesafe"
+GET https://httpbin.org/get?name=jev&feature=typesafe
+Accept: application/json
+
+### POST JSON
+# curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d "{\"city\":\"London\",\"country\":\"UK\"}"
+POST https://httpbin.org/post
+Content-Type: application/json
+Accept: application/json
+
+{
+  "city": "London",
+  "country": "UK"
+}
+
+### PUT JSON
+# curl -X PUT https://httpbin.org/put -H "Content-Type: application/json" -d "{\"status\":\"ok\"}"
+PUT https://httpbin.org/put
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "ok"
+}
+
+### DELETE
+# curl -X DELETE https://httpbin.org/delete
+DELETE https://httpbin.org/delete
+Accept: application/json
+
+### GET with a custom header
+# curl https://httpbin.org/headers -H "X-Request-Source: jev-test"
+GET https://httpbin.org/headers
+Accept: application/json
+X-Request-Source: jev-test
