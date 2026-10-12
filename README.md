@@ -1,4 +1,4 @@
-# jev-test
+# jev-test - Insurance claims processing
 
 Small Python project for [TypeSafe AI](https://docs.typesafe.ai/). It asks typed questions about a piece of text, then uses the returned probabilities to decide what to do next.
 
